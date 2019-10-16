@@ -2,32 +2,20 @@ import React, { useState } from 'react';
 import CustomerList from './CustomerList';
 import AddCustomerForm from './AddCustomerForm';
 import Paper from '@material-ui/core/Paper';
+import Trainings from './Trainings';
+import './PersonalTrainerApp.css'
 
 function PersonalTrainerApp() {
-    /* const initialState= [
-       {firstname: "Mary",
-        lastname: "Philips",
-        streetaddress: "Hill Street 3",
-        postcode: "23322",
-        city: "Flintsone",
-        email: "m.philips@mail.com",
-        phone: "232-310122"},
-       {firstname: "Dan",
-        lastname: "Davidson",
-        streetaddress: "32 Main Road",
-        postcode: "23130",
-        city: "Flintsone",
-        email: "dan.d@mail.com",
-        phone: "232-1227006"}
-    ] */
 
     const [customers, setCustomers] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const fetchData = () => {
         fetch('https://customerrest.herokuapp.com/api/customers')
         .then(response => response.json())
         .then(responseData => {
             setCustomers(responseData.content);
+            setIsLoaded(true);
         })
     };
 
@@ -36,6 +24,8 @@ function PersonalTrainerApp() {
         } ,[] 
       );
 
+    console.log(customers);
+      
     const addCustomer = newCustomer => {
         fetch("https://customerrest.herokuapp.com/api/customers",
           {
@@ -78,11 +68,24 @@ function PersonalTrainerApp() {
           })
     };
 
+  
+
     return (
-        <Paper>
-            <AddCustomerForm addCustomer={addCustomer}/>
-            <CustomerList customers={customers} deleteCustomer={deleteCustomer} editCustomer={editCustomer} addTraining={addTraining}/>
-        </Paper>
+      <Paper>
+        {isLoaded ? (
+          <CustomerList 
+            customers={customers} 
+            addCustomer={addCustomer} 
+            deleteCustomer={deleteCustomer} 
+            editCustomer={editCustomer} 
+            ddTraining={addTraining}
+            />
+        ) : (
+          <div className="rubik-loader"></div>
+        )}
+          
+      </Paper>
+        
     )
 }
 

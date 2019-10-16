@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navigator from './Navigator'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './PersonalTrainerApp.css'
 
 
 
@@ -92,6 +93,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      
       
     </div>
   );

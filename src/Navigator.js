@@ -80,22 +80,6 @@ function Navigator() {
             <li className="nav-item">
                 <Link className="nav-link" to="/calendar">Calendar</Link>
             </li>
-            <li>
-                {/* <div className={classes.search}>
-                    <div className={classes.searchIcon}>
-                    <SearchIcon />
-                    </div>
-                    <InputBase
-                        placeholder="Search…"
-                        classes={{
-                            root: classes.inputRoot,
-                            input: classes.inputInput,
-                        }}
-                        inputProps={{ 'aria-label': 'search' }}
-                    />
-                </div> */}
-                <Search />
-            </li>
         </ul >
         </div>
     </nav>
