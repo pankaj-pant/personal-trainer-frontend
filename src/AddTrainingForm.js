@@ -91,12 +91,7 @@ function AddTrainingForm({custId, data, addTraining, toggleEditForm}) {
         </Dialog> */
 
         <div>
-            <form onSubmit={(event)=>{
-                event.preventDefault();
-                addTraining(training);
-                reset();
-                toggleEditForm();
-            }}>
+            <form>
                 <FormGroup>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <Grid container justify="space-around">
@@ -119,11 +114,16 @@ function AddTrainingForm({custId, data, addTraining, toggleEditForm}) {
                     <TextField name="duration" label="Duration" onChange={handleChange} value={training.duration} autoFocus
                 margin="dense" fullWidth/>
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button onClick={(event)=>{
+                            event.preventDefault();
+                            addTraining(training);
+                            reset();
+                            toggleEditForm();
+                    }}>Submit</Button>
                 
-                    <Button onClick={toggleEditForm} color="primary">
-                        Cancel
-                    </Button>
+                <Button onClick={toggleEditForm} color="primary">
+                    Cancel
+                </Button>
                     
                     
             </form>

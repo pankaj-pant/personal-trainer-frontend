@@ -78,7 +78,7 @@ function PersonalTrainerApp() {
             addCustomer={addCustomer} 
             deleteCustomer={deleteCustomer} 
             editCustomer={editCustomer} 
-            ddTraining={addTraining}
+            addTraining={addTraining}
             />
         ) : (
           <div className="rubik-loader"></div>
