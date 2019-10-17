@@ -29,7 +29,7 @@ function AddTrainingForm({custId, data, addTraining, toggleEditForm}) {
       };
 
     const [training, setTraining] = useState({
-        date: "",
+        date: selectedDate,
         activity: "",
         duration: "",
         customer: custId
