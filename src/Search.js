@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { placeholder } from "@babel/types";
+import React from 'react'
+
 
 const Search = ({ search }) => {
- 
+
 
   return (
     <form className="search">
@@ -12,7 +12,7 @@ const Search = ({ search }) => {
       />
       <button>Search</button>
     </form>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

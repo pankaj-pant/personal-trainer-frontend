@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import PersonalTrainerApp from './PersonalTrainerApp'
-import Trainings from './Trainings';
-import CalendarDisplay from './CalendarDisplay';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+import Trainings from './Trainings'
+import CalendarDisplay from './CalendarDisplay'
+import { fade, makeStyles } from '@material-ui/core/styles'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Navigator from './Navigator'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './PersonalTrainerApp.css'
 
 
@@ -73,31 +73,31 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   }
-}));
+}))
 
 
 function App() {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
 
   return (
     <div className="App">
-       
+
       <Router>
         <div>
           <Navigator />
           <Switch>
-            <Route path="/" exact component={PersonalTrainerApp} />     
+            <Route path="/" exact component={PersonalTrainerApp} />
             <Route path="/trainings/" component={Trainings} />
             <Route path="/calendar/" component={CalendarDisplay} />
           </Switch>
         </div>
       </Router>
-      
-      
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 
