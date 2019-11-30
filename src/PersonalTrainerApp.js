@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './PersonalTrainerApp.css'
-import './Customers.css'
 import AddTrainingForm from './AddTrainingForm'
 import useToggleState from './hooks/useToggleState'
 
