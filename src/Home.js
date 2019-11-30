@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import CustomersCard from './CustomersCard'
+import React from 'react'
 
 function Home(){
   return (

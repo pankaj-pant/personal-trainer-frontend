@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+PersonalTrainerAppOrg.js
+CustomerList.js
+AddCustomerForm.js
+Customer.js
+Customers.css
+EditCustomerForm.js
+Home.js
+Search.js
+/hooks/useInputState.js

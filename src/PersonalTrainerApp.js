@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import Paper from '@material-ui/core/Paper'
 import './PersonalTrainerApp.css'
-
-
-import 'react-table/react-table.css'
-import MaterialTable from 'material-table'
 import './Customers.css'
 import AddTrainingForm from './AddTrainingForm'
 import useToggleState from './hooks/useToggleState'
+
+import Paper from '@material-ui/core/Paper'
+import MaterialTable from 'material-table'
+import 'react-table/react-table.css'
 import Dialog from '@material-ui/core/Dialog'
 import Snackbar from '@material-ui/core/Snackbar'
 
@@ -16,7 +15,7 @@ function PersonalTrainerApp() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isEditingTrainingForm, toggleIsEditingTrainingForm] = useToggleState(false)
   const [custId, setCustId] = useState('')
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
   const [message, setMessage] = useState('')
 
   const handleClose = (event, reason) => {

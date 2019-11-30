@@ -9,15 +9,13 @@ import { DateTimePicker } from 'material-ui-pickers'
 import { MuiPickersUtilsProvider } from 'material-ui-pickers'
 import DateFnsUtils from '@date-io/date-fns'
 import Button from '@material-ui/core/Button'
+import Snackbar from '@material-ui/core/Snackbar'
 
 
 function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
   const [selectedDate, setSelectedDate] = useState(new Date())
-  const [open, setOpen] = useState(true)
-
-  const handleClickOpen = () => {
-    setOpen(true)
-  }
+  const [open, setOpen] = useState(false)
+  const [message, setMessage] = useState('')
 
   const handleClose = () => {
     setOpen(false)
@@ -76,16 +74,26 @@ function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
         <Button onClick={(event)=>{
           event.preventDefault()
           addTraining(training)
-          reset()
-          toggleEditForm()
-        }}>Submit</Button>
-
-        <Button onClick={toggleEditForm} color="primary">
-                    Cancel
+          setMessage('Training added')
+          setOpen(true)
+          setTimeout(() => {
+            reset()
+            toggleEditForm()
+          }, 2000)
+        }}>
+          Submit
         </Button>
 
-
+        <Button onClick={toggleEditForm} color="primary">
+          Cancel
+        </Button>
       </form>
+      <Snackbar
+        open={open}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        message={message}
+      />
     </div>
 
   )
