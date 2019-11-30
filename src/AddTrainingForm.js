@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField'
-import moment from 'moment'
-import InputMoment from 'input-moment'
 import 'input-moment/dist/input-moment.css'
 import { FormGroup } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
@@ -10,7 +8,6 @@ import { MuiPickersUtilsProvider } from 'material-ui-pickers'
 import DateFnsUtils from '@date-io/date-fns'
 import Button from '@material-ui/core/Button'
 import Snackbar from '@material-ui/core/Snackbar'
-
 
 function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
   const [selectedDate, setSelectedDate] = useState(new Date())
@@ -68,7 +65,7 @@ function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
         <FormGroup>
           <TextField name="activity" label="Activity" onChange={handleChange} value={training.activity} autoFocus
             margin="dense" fullWidth/>
-          <TextField name="duration" label="Duration" onChange={handleChange} value={training.duration} autoFocus
+          <TextField name="duration" label="Duration in minutes" onChange={handleChange} value={training.duration} autoFocus
             margin="dense" fullWidth/>
         </FormGroup>
         <Button onClick={(event)=>{
@@ -79,7 +76,7 @@ function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
           setTimeout(() => {
             reset()
             toggleEditForm()
-          }, 2000)
+          }, 1500)
         }}>
           Submit
         </Button>
@@ -90,7 +87,7 @@ function AddTrainingForm({ custId, data, addTraining, toggleEditForm }) {
       </form>
       <Snackbar
         open={open}
-        autoHideDuration={2000}
+        autoHideDuration={1500}
         onClose={handleClose}
         message={message}
       />

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import './PersonalTrainerApp.css'
 import AddTrainingForm from './AddTrainingForm'
 import useToggleState from './hooks/useToggleState'
-
 import Paper from '@material-ui/core/Paper'
 import MaterialTable from 'material-table'
 import 'react-table/react-table.css'
@@ -46,7 +45,8 @@ function PersonalTrainerApp() {
 
   useEffect(() => {
     fetchData()
-  }, []
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  } ,[]
   )
 
   const addCustomer = newCustomer => {

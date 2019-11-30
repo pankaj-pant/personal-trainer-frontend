@@ -33,22 +33,16 @@ function CalendarDisplay() {
       .then(response => response.json())
       .then(responseData => {
         let appointments = responseData.content
-        console.log(appointments)
         let agendaItems = []
-        //appointments.map(appointment => setEvents([...events, {id: uuid(), title: appointment.activity, start: new Date(appointment.date), end: new Date("2019-10-14T14:57:59.751+0000")}]));
         for (let i = 0; i < appointments.length; i++){
           const start = new Date(appointments[i].date)
           const end = new Date(appointments[i].date)
           end.setMinutes(end.getMinutes() + appointments[i].duration)
           agendaItems.push( { id: uuid(), title: appointments[i].activity, start: start, end: end })
         }
-        console.log(agendaItems)
-        const start = new Date()
+        //const start = new Date()
         const end = new Date()
         end.setMinutes(end.getMinutes() + appointments[0].duration)
-
-        console.log(start)
-        console.log(end)
 
         setEvents(agendaItems)
       })

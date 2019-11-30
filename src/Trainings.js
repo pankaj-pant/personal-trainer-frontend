@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 import moment from 'moment'
@@ -22,7 +22,7 @@ function Trainings() {
       })
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchData()
   } ,[]
   )
