@@ -17,8 +17,8 @@ There are three main pages in the application
 ## Quick start
 
 1. [Clone the repo](#1-clone-the-repo).
-1. [Install the dependencies](#2-install-the-dependencies).
-1. [Run the frontend](#4-run-the-frontend).
+1. [Install and build app](#2-install-and-build-app).
+1. [Run the frontend](#3-run-the-frontend).
 
 ### 1. Clone the repo
 
@@ -29,7 +29,7 @@ $ git clone https://github.com/pankaj-pant/personal-trainer-frontend.git
 $ cd personal-trainer-frontend
 ```
 
-### 2. Install the dependencies and build production version of app
+### 2. Install and build app
 
 To install the dependencies and build a production version of the app, run the commands:
 
