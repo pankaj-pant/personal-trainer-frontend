@@ -24,6 +24,7 @@ function Navigator() {
           </li>
         </ul>
       </div>
+      <a href="https://github.com/pankaj-pant/personal-trainer-frontend" target="_blank" className="nav-link">Help?</a>
     </nav>
   )
 }

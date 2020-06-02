@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend for a Personal Training Company
 
-## Available Scripts
+A simple front end application built using React. The application connects to the customer database (which contains info about customers and their trainings) using REST API. 
 
-In the project directory, you can run:
+* [Live Demo](https://personal-trainer-frontend-pp.herokuapp.com/)
 
-### `npm start`
+## Using the app
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There are three main pages in the application
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1) Customers page - Lists all customers and their details in a paginated table. In this page customer info can be edited, deleted and new trainings for a customer can also be added. The page also contains sort and search features.
 
-### `npm test`
+2) Trainings page - Lists all trainings and their details. The page also contains sort and search features. Trainings can be deleted through this page.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3) Calendar page - Lists all trainings in a calendar view, where user can see trainings (monthly, weekly, daily)
 
-### `npm run build`
+## Quick start
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. [Clone the repo](#1-clone-the-repo).
+1. [Install the dependencies](#2-install-the-dependencies).
+1. [Run the frontend](#4-run-the-frontend).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### 1. Clone the repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the `personal-trainer-frontend` repository locally. In a terminal, run:
 
-### `npm run eject`
+```
+$ git clone https://github.com/pankaj-pant/personal-trainer-frontend.git
+$ cd personal-trainer-frontend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2. Install the dependencies and build production version of app
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To install the dependencies and build a production version of the app, run the commands:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    $ npm install
+    $ npm run build
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 3. Run the frontend
 
-## Learn More
+This command serves the app at `http://localhost:8080/`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    $ npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
