@@ -2,7 +2,7 @@
 
 A simple front end application built using React. The application connects to the customer database (which contains info about customers and their trainings) using REST API. 
 
-* [Live Demo](https://personal-trainer-frontend-pp.herokuapp.com/)
+* [Live Demo](https://personal-trainer-c1761.web.app/)
 
 ## Using the app
 

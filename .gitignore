@@ -33,3 +33,5 @@ Search.js
 /hooks/useInputState.js
 
 /junk
+
+.firebase/
